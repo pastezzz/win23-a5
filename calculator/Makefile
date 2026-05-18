@@ -1,5 +1,5 @@
 CC = gcc
-CFLAGS = -Wall -Wextra -std=c11
+CFLAGS = -Wall -Wextra -Wno-unused-parameter -std=c11
 
 calculator: main.o addition.o subtraction.o multiplication.o division.o
 	$(CC) $(CFLAGS) -o calculator main.o addition.o subtraction.o multiplication.o division.o
@@ -21,4 +21,3 @@ division.o: division.c operations.h
 
 clean:
 	rm -f calculator *.o
-	$(MAKE) calculator
