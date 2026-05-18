@@ -21,3 +21,4 @@ division.o: division.c operations.h
 
 clean:
 	rm -f calculator *.o
+	$(MAKE) calculator
